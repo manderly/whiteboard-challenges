@@ -46,3 +46,18 @@ stack.push(444);
 stack.push(81);
 stack.push(-2);
 console.log("stack min is: " + stack.min());
+
+
+
+/*
+CHANGES FROM ORIGINAL WHITEBOARD SOLUTION:
+
+Line 19:
+Changed while (this.arr) to while (this.arr.length > 0) because
+it doesn't work when all it checks for is presence of the arr.
+
+Line 29 and down:
+Added the other stack functions not included on whiteboard needed
+to actually test the min function.
+
+*/
