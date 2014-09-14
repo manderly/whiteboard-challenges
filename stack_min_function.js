@@ -16,7 +16,7 @@ var Stack = function() {
 Stack.prototype.min = function() {
   var check = 0;
   var smallest = this.arr.pop();
-  while (this.arr) {
+  while (this.arr.length > 0) {
     check = this.arr.pop();
     if (check < smallest) {
       smallest = check;
@@ -31,16 +31,18 @@ Stack.prototype.push = function(element) {
   this.arr.push(element);
 };
 
-Stack.prototype.pop = function(element) {
+Stack.prototype.pop = function() {
   return this.arr.pop();
-}
+};
 
-var stack = new Stack;
+var stack = new Stack();
 stack.push(1);
 stack.push(55);
+stack.push(-41);
 stack.push(-42);
 stack.push(81910);
 stack.push(15);
 stack.push(444);
 stack.push(81);
+stack.push(-2);
 console.log("stack min is: " + stack.min());
