@@ -8,7 +8,7 @@ In most cases, the whiteboard solutions aren't perfect - see the associated .js 
 
 reverse_word_order.js
 
-![alt text](photos/reverse_word_order.jpg "Whiteboard solution to reverse word order challenge")
+![alt text](photos/reversed_word_order.jpg "Whiteboard solution to reverse word order challenge")
 
 stack_min_function.js
 
