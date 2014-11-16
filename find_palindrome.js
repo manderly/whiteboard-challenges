@@ -1,29 +1,29 @@
 //Create a function that detects if a string is a palindrome
 //Return true if it's a palindrome, return false if it is not
+//Console logs added so you can see that it works
 
 var findPalindrome = function(str) {
 
   if (typeof str !== "string" || !str.length) {
-    console.log("Not a string! " + str);
+    console.log("Invalid string input! " + str);
     return false;
   }
 
-  var str = str.toLowerCase();
-  var reversed = "";
-  var right = str.length - 1; //get the last letter and set its index to "right"
-  var left = 0; //left just starts at the first index
+  //strip out spaces so things like "race car" still return true
+  var str = str.toLowerCase().replace(/\s/g,'');
 
-  //build up a reversed version of the input string
+  //get the last letter and save its index to a var
+  var last = str.length - 1;
+
   //stop building it once halfway through the inputted string
-  var midpoint = right/2;
-  while (reversed.length - 1 < midpoint) {
-    if (str[left] !== str[right]) {
+  var midpoint = last/2;
+
+  for (var i = 0; i < midpoint; i ++) {
+    if (str[i] !== str[last]) {
       console.log("FALSE! " + str + " is NOT a palindrome");
       return false;
     } else {
-      reversed += str[right];
-      left += 1;
-      right -= 1;
+      last -= 1;
     }
   }
   console.log("TRUE! " + str + " is a palindrome!");
@@ -38,6 +38,6 @@ findPalindrome("aqqqa"); //true
 findPalindrome("aa"); //true
 findPalindrome("a a"); //true
 findPalindrome(" a "); //true
-findPalindrome("race car");
+findPalindrome("race car"); //true
 
 //questions: what to do about spaces?
