@@ -7,8 +7,10 @@ var Dog = function(name,color,breed,sex) {
 	this.sex = sex;
 }
 
-Dog.prototype.bark = function() {
-	console.log("Woof!");
+Dog.prototype.bark = function(times) {
+	for (var i = 0; i < times; i ++) {
+		console.log("Woof!");
+	}
 }
 
 Dog.prototype.sniff = function() {
@@ -22,3 +24,4 @@ Dog.prototype.getInfo = function() {
 var gadget = new Dog("Gadget","Tan","Chihuahua","Female");
 gadget.color = "Fawn";
 console.log(gadget.getInfo());
+gadget.bark(2);
