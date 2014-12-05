@@ -14,7 +14,8 @@ var params = {
 for (var i = 0; i < 100; i ++ ) {
   str = i + " ";
   for (var key in params) {
-    if (params.hasOwnProperty(key) && i % key === 0) { //hasOwnProperty(key) restricts this check to properties I set manually
+    //hasOwnProperty(key) restricts this check to properties I set manually
+    if (params.hasOwnProperty(key) && i % key === 0) { 
       str += params[key];
     }
   }
